@@ -1,6 +1,6 @@
 ##Parking Lot
 
-Task: implement a parking lot system with the grid 
+Task: implement a parking lot system using the grid below
 
 
 ##### PARKING LOT STRUCTURE
