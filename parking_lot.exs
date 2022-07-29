@@ -72,7 +72,8 @@ defmodule ParkingLot do
       true ->
         available = spaces |> List.first()
         pid |> GenServerService.park(type, available, "x")
-        pid |> GenServerService.view_parking()
+        parked_spot = available |> Integer.to_string()
+        "You have parked at lot `#{type}' at spot #{parked_spot}"
 
       false ->
         "No more spaces available for " <> type
