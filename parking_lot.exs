@@ -34,7 +34,7 @@ defmodule GenServerService do
     GenServer.stop(pid, :normal, :infinity)
   end
 
-  def terminate(_reason, map) do
+  def terminate(_reason, _map) do
     :ok
   end
 
