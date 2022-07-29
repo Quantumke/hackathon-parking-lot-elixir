@@ -39,17 +39,14 @@ defmodule GenServerService do
   end
 
   def handle_cast({:move, item}, map) do
-    row = item |> Enum.at(0)
-    column = item |> Enum.at(1)
+    [row, column] = item
     value = ""
     new_map = put_in(map[row][column], value)
     {:noreply, new_map}
   end
 
   def handle_cast(item, map) do
-    row = item |> Enum.at(0)
-    column = item |> Enum.at(1)
-    value = item |> Enum.at(2)
+    [row, column, value] = item
     new_map = put_in(map[row][column], value)
     {:noreply, new_map}
   end
